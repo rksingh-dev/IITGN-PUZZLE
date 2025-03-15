@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.piece {
+  @apply relative flex items-center justify-center bg-yellow-100 rounded transition-transform duration-300;
+  width: 100%;
+  height: 100%;
+}
+
+.piece.board-piece {
+  @apply w-full h-full;
+}
+
+.piece.available-piece {
+  @apply w-24 h-24;
+}
+
+.piece.selected {
+  @apply ring-2 ring-blue-500 shadow-lg;
+}
+
+.piece .edge {
+  @apply absolute text-sm font-medium text-gray-700;
+}
+
+.piece .top {
+  @apply top-2 left-1/2 -translate-x-1/2;
+}
+
+.piece .right {
+  @apply right-2 top-1/2 -translate-y-1/2;
+}
+
+.piece .bottom {
+  @apply bottom-2 left-1/2 -translate-x-1/2;
+}
+
+.piece .left {
+  @apply left-2 top-1/2 -translate-y-1/2;
+}
+
+.piece .piece-id {
+  @apply text-lg font-bold text-gray-900;
+}
+
+.piece:hover {
+  @apply bg-yellow-200 cursor-pointer;
+}
